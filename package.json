@@ -1,0 +1,9 @@
+{
+  "name": "telegram-payment-bia-stars-bot",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "grammy": "^1.21.1"
+  }
+}

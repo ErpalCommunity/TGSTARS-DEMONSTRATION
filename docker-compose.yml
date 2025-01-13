@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    container_name: telegram-payment-bot
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+    volumes:
+      - ./api:/bot/api
+    networks:
+      - bot-network
+    ports:
+      - "3000:3000"
+
+networks:
+  bot-network:
+    driver: bridge
